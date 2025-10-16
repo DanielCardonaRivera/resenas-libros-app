@@ -1,0 +1,67 @@
+<div class="flex items-center justify-center min-h-screen bg-gray-900 text-white">
+  <div class="bg-gray-800 p-8 rounded-lg w-full max-w-md shadow-lg">
+    <h2 class="text-2xl font-bold mb-6 text-center">Regístrate</h2>
+
+    <form (ngSubmit)="register()" #registerForm="ngForm">
+      <div class="mb-4">
+        <label class="block text-gray-300 mb-2" for="name">Nombre completo</label>
+        <input
+          class="w-full p-2 bg-gray-700 text-white rounded"
+          type="text"
+          id="name"
+          [(ngModel)]="user.name"
+          name="name"
+          required
+        />
+      </div>
+
+      <div class="mb-4">
+        <label class="block text-gray-300 mb-2" for="username">Nombre de usuario</label>
+        <input
+          class="w-full p-2 bg-gray-700 text-white rounded"
+          type="text"
+          id="username"
+          [(ngModel)]="user.username"
+          name="username"
+          required
+        />
+      </div>
+
+      <div class="mb-4">
+        <label class="block text-gray-300 mb-2" for="email">Correo electrónico</label>
+        <input
+          class="w-full p-2 bg-gray-700 text-white rounded"
+          type="email"
+          id="email"
+          [(ngModel)]="user.email"
+          name="email"
+          required
+        />
+      </div>
+
+      <div class="mb-4">
+        <label class="block text-gray-300 mb-2" for="password">Contraseña</label>
+        <input
+          class="w-full p-2 bg-gray-700 text-white rounded"
+          type="password"
+          id="password"
+          [(ngModel)]="user.password"
+          name="password"
+          required
+        />
+      </div>
+
+      <button
+        class="w-full bg-green-500 text-white p-2 rounded hover:bg-green-600 transition"
+        type="submit"
+      >
+        Regístrate
+      </button>
+
+      <p class="text-gray-400 text-sm mt-4 text-center">
+        ¿Ya tienes una cuenta?
+        <a class="text-green-400 hover:underline" routerLink="/login">Inicia sesión</a>
+      </p>
+    </form>
+  </div>
+</div>

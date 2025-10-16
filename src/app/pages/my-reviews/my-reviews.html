@@ -1,0 +1,71 @@
+<div class="p-6 max-w-2xl mx-auto">
+  <h1 class="text-3xl font-bold mb-6">Mis Reseñas del Libro #{{ bookId }}</h1>
+
+  <!-- Formulario para agregar/editar reseña -->
+  <form (ngSubmit)="addOrUpdateReview()" class="space-y-3 mb-6">
+    <div>
+      <label for="reviewText" class="block text-gray-700 font-semibold mb-2">Tu Reseña:</label>
+      <textarea
+        id="reviewText"
+        [(ngModel)]="reviewText"
+        name="reviewText"
+        rows="4"
+        class="w-full p-2 border border-gray-300 rounded"
+        placeholder="Escribe aquí tu reseña..."
+        required>
+      </textarea>
+    </div>
+
+    <div>
+      <label for="rating" class="block text-gray-700 font-semibold mb-2">Calificación:</label>
+      <select
+        id="rating"
+        [(ngModel)]="rating"
+        name="rating"
+        class="w-full p-2 border border-gray-300 rounded"
+        required>
+        <option *ngFor="let r of [1, 2, 3, 4, 5]" [value]="r">{{ r }} ★</option>
+      </select>
+    </div>
+
+    <div class="flex gap-3">
+      <button type="submit" class="bg-green-700 text-white px-4 py-2 rounded hover:bg-green-900">
+        {{ editMode ? 'Actualizar Reseña' : 'Agregar Reseña' }}
+      </button>
+      <button
+        type="button"
+        (click)="resetForm()"
+        class="bg-gray-500 text-white px-4 py-2 rounded hover:bg-gray-600">
+        Cancelar
+      </button>
+    </div>
+  </form>
+
+  <!-- Lista de reseñas -->
+  <div *ngIf="reviews.length > 0; else noReviews">
+    <h2 class="text-2xl font-bold mb-4">Tus Reseñas</h2>
+
+    <div *ngFor="let review of reviews" class="bg-white p-4 rounded shadow mb-4">
+      <p class="text-gray-800 mb-2">{{ review.comentario }}</p>
+      <p class="text-yellow-500 mb-2">Calificación: {{ review.calificacion }} ★</p>
+      <p class="text-gray-500 text-sm">Por {{ review.usuario }} - {{ review.fecha }}</p>
+
+      <div class="flex gap-2 mt-3">
+        <button
+          (click)="editReview(review)"
+          class="bg-green-500 text-white px-3 py-1 rounded hover:bg-green-600">
+          Editar
+        </button>
+        <button
+          (click)="deleteReview(review.id)"
+          class="bg-red-500 text-white px-3 py-1 rounded hover:bg-red-600">
+          Eliminar
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <ng-template #noReviews>
+    <p class="text-gray-500">No has agregado ninguna reseña aún.</p>
+  </ng-template>
+</div>

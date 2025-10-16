@@ -1,0 +1,43 @@
+<div class="flex min-h-screen items-center justify-center bg-gray-900">
+  <div class="bg-gray-800 p-8 rounded-lg w-full max-w-md">
+    <h2 class="text-2xl font-bold text-white mb-4 text-center">Iniciar sesión</h2>
+
+    <form (ngSubmit)="login()" #loginForm="ngForm">
+      <div class="mb-4">
+        <label class="block text-gray-300 mb-2" for="email">Correo electrónico</label>
+        <input
+          class="w-full p-2 bg-gray-700 text-white rounded"
+          type="email"
+          id="email"
+          name="email"
+          [(ngModel)]="email"
+          required
+        />
+      </div>
+
+      <div class="mb-4">
+        <label class="block text-gray-300 mb-2" for="password">Contraseña</label>
+        <input
+          class="w-full p-2 bg-gray-700 text-white rounded"
+          type="password"
+          id="password"
+          name="password"
+          [(ngModel)]="password"
+          required
+        />
+      </div>
+
+      <button
+        class="w-full bg-green-500 text-white p-2 rounded hover:bg-green-600 transition"
+        type="submit"
+      >
+        Iniciar sesión
+      </button>
+
+      <p class="text-gray-400 text-sm mt-4 text-center">
+        ¿No tienes una cuenta?
+        <a class="text-green-400 hover:underline" routerLink="/register">Regístrate</a>
+      </p>
+    </form>
+  </div>
+</div>
