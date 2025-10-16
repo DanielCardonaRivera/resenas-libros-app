@@ -1,35 +1,37 @@
-## Reseñas Libros App
+# 📚 Reseñas Libros App
 
-Aplicación web desarrollada con Angular para gestionar reseñas de libros.
-Permite a los usuarios registrarse, iniciar sesión, visualizar libros, ver detalles y agregar, editar o eliminar reseñas.
+Aplicación web desarrollada con **Angular** para gestionar reseñas de libros. Permite a los usuarios registrarse, iniciar sesión, visualizar libros, ver detalles y **agregar, editar o eliminar reseñas** propias.
 
-## Características principales
+---
 
-Registro y autenticación de usuarios con almacenamiento local.
+## ✨ Características Principales
 
-Listado de libros con navegación al detalle.
+* **Registro y Autenticación** de usuarios.
+* **Listado de libros** con navegación al detalle.
+* Sistema **CRUD** (Crear, Leer, Actualizar y Eliminar) para reseñas.
+* **Protección de rutas** mediante *guards* de autenticación.
+* Interfaz moderna y responsiva diseñada con **Tailwind CSS**.
 
-Sistema CRUD para reseñas (crear, leer, actualizar y eliminar).
+---
 
-Protección de rutas mediante guardas de autenticación.
+## 💻 Tecnologías Utilizadas
 
-Interfaz moderna y responsiva con Tailwind CSS.
+| Categoría | Tecnología |
+| :--- | :--- |
+| **Frontend** | Angular 18, TypeScript |
+| **Estilos** | Tailwind CSS |
+| **Ruteo** | Angular Router |
+| **Servicios** | Inyección de dependencias y comunicación entre componentes |
+| **Base de datos (planeada)** | PostgreSQL |
+| **Backend (pendiente)** | API REST con Node.js / Spring Boot |
 
-## Tecnologías utilizadas
+---
 
-Frontend: Angular 18, TypeScript
+## 📂 Estructura del Proyecto
 
-Estilos: Tailwind CSS
+Esta es la organización de los directorios principales del código fuente.
 
-Ruteo: Angular Router
-
-Servicios: Inyección de dependencias y comunicación entre componentes
-
-Base de datos (planeada): PostgreSQL
-
-Backend (pendiente): API REST con Node.js / Spring Boot
-
-## Estructura del proyecto
+```text
 src/
 ├── app/
 │   ├── core/
@@ -43,39 +45,37 @@ src/
 │   ├── app.routes.ts
 │   └── app.ts
 └── assets/           # 🖼️ Archivos estáticos (imágenes, fuentes, etc.)
+🚀 Instalación y Ejecución Local
+Sigue estos pasos para poner en marcha la aplicación en tu entorno de desarrollo.
 
-## Instalación y ejecución local
+1. Clonar el repositorio
+Bash
 
-Clonar el repositorio:
-
-git clone https://github.com/tuusuario/resenas-libros-app.git
+git clone [https://github.com/tuusuario/resenas-libros-app.git](https://github.com/tuusuario/resenas-libros-app.git)
 cd resenas-libros-app
-
-
-Instalar dependencias:
+2. Instalar dependencias
+Bash
 
 npm install
-
-
-Ejecutar el servidor de desarrollo:
+3. Ejecutar el servidor de desarrollo
+Bash
 
 ng serve
+4. Abrir en el navegador
+Accede a la aplicación en:
 
-
-Abrir en el navegador:
+Plaintext
 
 http://localhost:4200
 
-Próximos pasos
-
+🎯 Próximos Pasos (Roadmap)
 Conectar el frontend con una API real (Node.js o Spring Boot).
 
 Implementar autenticación con JWT.
 
 Guardar y recuperar datos desde PostgreSQL.
 
-Desplegar la aplicación en producción (por ejemplo, en Vercel o Render).
+Desplegar la aplicación en producción (Vercel o Render).
 
-##Licencia
-
-Este proyecto se distribuye bajo la licencia MIT.
+📄 Licencia
+Este proyecto se distribuye bajo la Licencia MIT.
