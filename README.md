@@ -30,7 +30,19 @@ Base de datos (planeada): PostgreSQL
 Backend (pendiente): API REST con Node.js / Spring Boot
 
 ## Estructura del proyecto
-<pre> ```text src/ ├── app/ │ ├── core/ │ │ ├── guards/ # Autenticación y protección de rutas │ │ ├── services/ # Servicios y lógica de negocio │ ├── components/ # Navbar, Footer, etc. │ ├── pages/ │ │ ├── auth/ # Login y Registro │ │ ├── books/ # Listado y detalle de libros │ │ └── my-reviews/ # CRUD de reseñas │ ├── app.routes.ts │ └── app.ts └── assets/ ``` </pre>
+src/
+├── app/
+│   ├── core/
+│   │   ├── guards/   # 🛡️ Autenticación y protección de rutas
+│   │   └── services/  # 🛠️ Servicios y lógica de negocio
+│   ├── components/  # 🧩 Componentes reutilizables (Navbar, Footer, etc.)
+│   ├── pages/
+│   │   ├── auth/      # 🔑 Login y Registro
+│   │   ├── books/     # 📚 Listado y detalle de libros
+│   │   └── my-reviews/ # 📝 CRUD de reseñas
+│   ├── app.routes.ts
+│   └── app.ts
+└── assets/           # 🖼️ Archivos estáticos (imágenes, fuentes, etc.)
 
 ## Instalación y ejecución local
 
