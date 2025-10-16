@@ -1,59 +1,81 @@
-# Resenaslibrosapp
+## Reseñas Libros App
 
-This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 20.0.4.
+Aplicación web desarrollada con Angular para gestionar reseñas de libros.
+Permite a los usuarios registrarse, iniciar sesión, visualizar libros, ver detalles y agregar, editar o eliminar reseñas.
 
-## Development server
+## Características principales
 
-To start a local development server, run:
+Registro y autenticación de usuarios con almacenamiento local.
 
-```bash
+Listado de libros con navegación al detalle.
+
+Sistema CRUD para reseñas (crear, leer, actualizar y eliminar).
+
+Protección de rutas mediante guardas de autenticación.
+
+Interfaz moderna y responsiva con Tailwind CSS.
+
+## Tecnologías utilizadas
+
+Frontend: Angular 18, TypeScript
+
+Estilos: Tailwind CSS
+
+Ruteo: Angular Router
+
+Servicios: Inyección de dependencias y comunicación entre componentes
+
+Base de datos (planeada): PostgreSQL
+
+Backend (pendiente): API REST con Node.js / Spring Boot
+
+## Estructura del proyecto
+src/
+├── app/
+│   ├── core/
+│   │   ├── guards/        # Autenticación y protección de rutas
+│   │   ├── services/      # Servicios y lógica de negocio
+│   ├── components/        # Navbar, Footer, etc.
+│   ├── pages/
+│   │   ├── auth/          # Login y Registro
+│   │   ├── books/         # Listado y detalle de libros
+│   │   └── my-reviews/    # CRUD de reseñas
+│   ├── app.routes.ts
+│   └── app.ts
+└── assets/
+
+## Instalación y ejecución local
+
+Clonar el repositorio:
+
+git clone https://github.com/tuusuario/resenas-libros-app.git
+cd resenas-libros-app
+
+
+Instalar dependencias:
+
+npm install
+
+
+Ejecutar el servidor de desarrollo:
+
 ng serve
-```
 
-Once the server is running, open your browser and navigate to `http://localhost:4200/`. The application will automatically reload whenever you modify any of the source files.
 
-## Code scaffolding
+Abrir en el navegador:
 
-Angular CLI includes powerful code scaffolding tools. To generate a new component, run:
+http://localhost:4200
 
-```bash
-ng generate component component-name
-```
+Próximos pasos
 
-For a complete list of available schematics (such as `components`, `directives`, or `pipes`), run:
+Conectar el frontend con una API real (Node.js o Spring Boot).
 
-```bash
-ng generate --help
-```
+Implementar autenticación con JWT.
 
-## Building
+Guardar y recuperar datos desde PostgreSQL.
 
-To build the project run:
+Desplegar la aplicación en producción (por ejemplo, en Vercel o Render).
 
-```bash
-ng build
-```
+##Licencia
 
-This will compile your project and store the build artifacts in the `dist/` directory. By default, the production build optimizes your application for performance and speed.
-
-## Running unit tests
-
-To execute unit tests with the [Karma](https://karma-runner.github.io) test runner, use the following command:
-
-```bash
-ng test
-```
-
-## Running end-to-end tests
-
-For end-to-end (e2e) testing, run:
-
-```bash
-ng e2e
-```
-
-Angular CLI does not come with an end-to-end testing framework by default. You can choose one that suits your needs.
-
-## Additional Resources
-
-For more information on using the Angular CLI, including detailed command references, visit the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
+Este proyecto se distribuye bajo la licencia MIT.
